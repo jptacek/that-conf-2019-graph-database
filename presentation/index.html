@@ -1,49 +1,171 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>Introduction to Graph Databases - That Conference 2019</title>
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/black.css" />
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+    <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css" />
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? 'css/print/pdf.css'
+        : 'css/print/paper.css';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    <style>
+      h1.darkview {
+        /* your styles for the class version-one */
+        color: black;
+      }
+      h3.darkview {
+        /* your styles for the class version-one */
+        color: black;
+      }
 
-		<script src="js/reveal.js"></script>
+      html.vdim .backgrounds {
+        -webkit-filter: brightness(0.3);
+        -moz-filter: brightness(0.3);
+        -o-filter: brightness(0.3);
+        -ms-filter: brightness(0.3);
+        filter: brightness(0.3);
+      }
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
-			});
-		</script>
-	</body>
+      html.dim .backgrounds {
+        -webkit-filter: brightness(0.6);
+        -moz-filter: brightness(0.6);
+        -o-filter: brightness(0.6);
+        -ms-filter: brightness(0.6);
+        filter: brightness(0.6);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides" data-transition="concave">
+        <!-- slide 1 - intdocution -->
+        <section
+          data-background="/images/That-Conference-Branding-Slide.png"
+          data-state="vdim"
+        >
+          <h1 class="">Introduction To Graph Databases</h1>
+          <h3>That Conference - August 7, 2019</h3>
+        </section>
+
+        <!-- Slide about me -->
+        <section data-background="/images/louvre.jpg" data-state="dim">
+          <h2>John Ptacek</h2>
+          <p>
+            <i class="fa fa-html5 fa-sm"></i>&nbsp;<a href="https://jptacek.com"
+              >JPtacek.com</a
+            >
+          </p>
+          <p>
+            <i class="fa fa-twitter fa-sm"></i>&nbsp;<a
+              href="https://twitter.com/jptacek"
+              >@jptacek</a
+            >
+          </p>
+          <p>
+            <i class="fa fa-github fa-sm"></i>&nbsp;<a
+              href="https://github.com/jptacek"
+              >JPtacek</a
+            >
+          </p>
+          <p>
+            <i class="fa fa-linkedin fa-sm"></i>&nbsp;<a
+              href="https://www.linkedin.com/in/johnptacek"
+              >johnptacek</a
+            >
+          </p>
+          <p>
+            <i class="fa fa-html5 fa-sm"></i>&nbsp;<a
+              href="https://www.SkylineTechnologies.com"
+              >Skyline Technologies</a
+            >
+          </p>
+          <p>
+            <i class="fa fa-twitter fa-sm"></i>&nbsp;<a
+              href="https://twitter.com/SkylineTweets"
+              >@SkylineTweets</a
+            >
+          </p>
+        </section>
+
+        <!-- Sponsors -->
+        <section
+          data-background="/images/That-Conference-Sponsors-Slide.png"
+        ></section>
+
+        <!-- Agenda -->
+        <section>
+          <h2>Agenda</h2>
+        </section>
+		<section>
+			<section data-markdown>
+				# What is a Graph Database? #
+		
+				> The graph paradigm goes well beyond databases and application development; it’s a reimagining of what’s
+				possible around the idea of connections.
+		
+				[Neo4j blog](https://neo4j.com/blog/why-graph-databases-are-the-future/)
+			</section>
+			<section data-markdown>
+					# What is a Graph Database? #
+			
+					> The graph paradigm goes well beyond databases and application development; it’s a reimagining of what’s
+					possible around the idea of connections.
+			
+					[Neo4j blog](https://neo4j.com/blog/why-graph-databases-are-the-future/)
+				</section>			<section  >
+				<h2>Explosive Growth</h2>
+
+				<img src="/images/graphDbases_since_2013.png"  height="480"  >
+
+				<a href="https://db-engines.com/en/ranking_categories">Source</a>
+			</section>
+		</section>
+        <section data-background="/images/louvre.jpg" data-state="dim">
+          <h2>Questions?</h2>
+          <h3>John Ptacek</h3>
+          <p>
+            <i class="fa fa-twitter fa-sm"></i>&nbsp;<a
+              href="https://twitter.com/jptacek"
+              >@jptacek</a
+            >
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true },
+        ],
+      });
+    </script>
+  </body>
 </html>
