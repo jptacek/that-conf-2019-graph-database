@@ -125,18 +125,138 @@
 				[Neo4j blog](https://neo4j.com/blog/why-graph-databases-are-the-future/)
 			</section>
 			<section data-markdown>
-					# What is a Graph Database? #
-			
-					> The graph paradigm goes well beyond databases and application development; it’s a reimagining of what’s
-					possible around the idea of connections.
-			
-					[Neo4j blog](https://neo4j.com/blog/why-graph-databases-are-the-future/)
-				</section>			<section  >
+					# Use Cases #
+
+					* Recommendation Engines 
+					* Artificial Intelligence 
+					* Master Data 
+					* Knowledge Graph
+					* Fraud Detection
+					* Centrality and Clustering
+
+				</section>
+				<section  >
 				<h2>Explosive Growth</h2>
 
 				<img src="/images/graphDbases_since_2013.png"  height="480"  >
 
 				<a href="https://db-engines.com/en/ranking_categories">Source</a>
+			</section>
+		</section>
+		<section>
+			<section data-background="/images/Leonhard_Euler.jpg" data-state="vdim">
+				<h1>What is a Graph?</h1>
+				<ul>
+					<li>Seven Bridges of Königsberg</li>
+					<li>Walk through city and walk across each bridge once</li>
+					<li>Euler creates graph theory</li>
+				</ul>
+				<img src='/images/7bridges.png'>
+			</section>
+			<section data-background="/images/graph1.png" data-state="vdim">
+				<h1> Graph Theory</h1>
+				<ul>
+					<li>Construct to model relationships between objects</li>
+					<li>Vertex (node, point)</li>
+					<li>Edges (links, lines)</li>
+					<li>And then math happens</li>
+				</ul>
+				<img src='/images/graph1.png'>
+			</section>
+			<section data-background="/images/chemistry.png" data-state="vdim">
+				<h1> Applications</h1>
+				<ul>
+					<li>Linguistics - </li>
+					<li>Chemistry - Modelling of atom (atoms and bonds)</li>
+					<li>Physics - Quantum Field Theory</li>
+					<li>Social Sciences - Organizations of relationships</li>
+				</ul>
+				
+			</section>
+	
+		</section>
+		<section>
+			<section data-background="/images/Leonhard_Euler.jpg" data-state="vdim" section data-markdown>
+				# Graphs in Computer Sciences
+
+				* Graph (G) is a Vertext (V) and an Edge (E)
+				* Vertext is an object 
+				* Edge defines the relationship
+				* The Edge has directions, in or out
+
+			</section>
+			<section data-background="/images/graph1.png" data-state="vdim">
+				<h1>Sample Graph</h1>
+				<ul>
+					<li>John and Clark know each other and are friends. Relationship is two way</li>
+					<li>Carrie and Clark know each other, Carrie is the boss. Relationship is one way</li>
+				</ul>
+				<img src='/images/graph2.png'>
+			</section>
+			<section data-background="/images/graph1.png" data-state="vdim">
+				<h1>Graph Models Relationships</h1>
+				<ul>
+					<li>Solves the complexity of relationships</li>
+					<li>Relationship can have attributes; works_with, works_for</li>
+					<li>Richer than SQL databases for these types of datasets</li>
+					<li>Imagine a friend of a friend query in SQL with join table</li>
+				</ul>
+			</section>
+			<section data-background="/images/graph1.png" data-state="vdim">
+				<h3>Use Case for a Graph Database</h3>
+				<ul>
+					<li>Related/Recursive Data</li>
+					<ul>
+						<li>How do I know Person X</li>
+						<li>How many users follow people that follow me on twitter</li>
+					</ul>
+					<li>Pattern Matching</li>
+					<li>Clustering</li>
+					<ul>
+						<li>Finding significiant figures in history</li>
+						<li>Most influentional contact</li>
+						<li>parts fail at same time</li>
+					</ul>			
+				</ul>
+			</section>
+			<section data-background="/images/graph1.png" data-state="vdim">
+				<h3>Use Case for a SQL Database</h3>
+				<ul>
+					<li>Selection/Search</li>
+					<li>Aggregation</li>
+				</ul>
+
+			</section>
+			<section data-background="/images/graph1.png" data-state="vdim">
+				<h3>Use Case for a SQL Database</h3>
+				<ul>
+					<li>Selection/Search</li>
+					<li>Aggregation</li>
+				</ul>
+				
+			</section>
+		</section>
+		<section>
+			<section data-markdown>
+				## Graph Databases ##
+				
+				Two Types
+				1. Resource Definition Framework (RDF) Triplestore (W3C/semantic web)
+				1. Labled Property Graph
+			</section>
+			<section data-markdown>
+					## It Is Complicated ##
+					
+					* Standards don't really exist
+					* Multiple vendors, multiple implementations
+			</section>
+			<section data-markdown>
+					## Query Languages ##
+					* SPARQL - W3C Standard query language for the semantic web. Some graph databases support
+					* Cypher (and openCypher) - Query langauage developed bye Neo4J and opened source in 2015(check). Thi
+					* Gremlin - Part of Apache TinkerPop. Implemented widest variety of vendords, including CosmosDB, AWS, Janus Graph, etc. Even Neo4J implements
+					* GraphQL - Some vendors support GraphQL
+					*SQL-like things - A whole bunch of folks have SQL-esque implementations
 			</section>
 		</section>
         <section data-background="/images/louvre.jpg" data-state="dim">
