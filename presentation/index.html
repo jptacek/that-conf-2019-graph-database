@@ -60,14 +60,15 @@
         <!-- slide 1 - intdocution -->
         <section
           data-background="/images/That-Conference-Branding-Slide.png"
-          data-state="vdim"
+		  data-state="vdim"
+		  data-background-size="contain"
         >
           <h1 class="">Introduction To Graph Databases</h1>
           <h3>That Conference - August 7, 2019</h3>
         </section>
 
         <!-- Slide about me -->
-        <section data-background="/images/louvre.jpg" data-state="dim">
+        <section data-background="/images/louvre.jpg" data-state="dim" >
           <h2>John Ptacek</h2>
           <p>
             <i class="fa fa-html5 fa-sm"></i>&nbsp;<a href="https://jptacek.com"
@@ -108,7 +109,8 @@
 
         <!-- Slide - Sponsors -->
         <section
-          data-background="/images/That-Conference-Sponsors-Slide.png"
+		  data-background="/images/That-Conference-Sponsors-Slide.png"
+		  data-background-size="contain"
         ></section>
 
         <!-- Slide - Agenda -->
@@ -118,7 +120,7 @@
 
 		<!-- Slide - What is a graph secition -->
 		<section>
-			<section data-background="/images/Leonhard_Euler.jpg" data-state="vdim">
+			<section data-background="/images/Leonhard_Euler.jpg" data-state="vdim"  data-background-size="contain">
 				<h1>What is a Graph?</h1>
 				<ul>
 					<li>Seven Bridges of Königsberg</li>
@@ -169,8 +171,8 @@
 			<section data-background="/images/Leonhard_Euler.jpg" data-state="vdim" section data-markdown>
 				# Graphs in Computer Science
 
-				* Graph (G) is a Vertext (V) and an Edge (E)
-				* Vertext is an object 
+				* Graph (G) is a Vertex (V) and an Edge (E)
+				* Vertex is an object 
 				* Edge defines the relationship
 			</section>
 
@@ -189,7 +191,7 @@
 				<h1> Graph Theory - Vertices</h1>
 				<ul>
 					<li>Vertices can have a label (Person, Event)</li>
-					<li>Vertices can have arbitrary key-value properties (Birth, Death, Intro)</li>
+					<li>Vertices can have arbitrary key-value properties (Birth, Death, Intro_text)</li>
 				</ul>
 				<img src='/images/hamilton.png'>
 			</section>
@@ -207,32 +209,10 @@
 
 			<!-- Slide - What is a graph database secition - Vertices-->
 			<section data-background="/images/graph1.png" data-state="vdim">
-				<h1> Graph Theory - Edges</h1>
 				<img src='/images/hamilton-burr.png'>
 			</section>
 
 
-			<!-- Slide - What is a graph database secition - Use cases-->
-			<section data-markdown>
-					# Use Cases #
-
-					* Recommendation Engines 
-					* Artificial Intelligence 
-					* Master Data 
-					* Knowledge Graph
-					* Fraud Detection
-					* Centrality and Clustering
-
-			</section>
-
-			<!-- Slide - What is a graph database secition -->
-			<section  >
-				<h2>Explosive Growth</h2>
-
-				<img src="/images/graphDbases_since_2013.png"  height="480"  >
-
-				<a href="https://db-engines.com/en/ranking_categories">Source</a>
-			</section>
 
 			<!-- Slide - Graphs in computer science -->
 			<section data-background="/images/graph1.png" data-state="vdim">
@@ -245,6 +225,39 @@
 				</ul>
 			</section>
 
+			<!-- Slide - What is a graph database secition -->
+			<section  >
+				<h2>Explosive Growth</h2>
+
+				<img src="/images/graphDbases_since_2013.png"  height="480"  >
+
+				<a href="https://db-engines.com/en/ranking_categories">Source</a>
+			</section>
+
+		</section>
+		<section>
+
+			<!-- Slide - What is a graph database secition - Use cases-->
+			<section  >
+				<h2>SQL or Graph Database</h2>
+
+				<img src="images/shiny.jpeg"  height="480"  >
+			</section>
+
+			<!-- Slide - What is a graph database secition - Use cases-->
+			<section data-markdown>
+					# Use Cases for a Graph Database#
+
+					* Recommendation Engines 
+					* Artificial Intelligence 
+					* Master Data 
+					* Knowledge Graph
+					* Fraud Detection
+					* Centrality and Clustering
+
+			</section>
+
+			
 			<!-- Slide - Graphs in computer science -->
 			<section data-background="/images/graph1.png" data-state="vdim">
 				<h3>Use Case for a Graph Database</h3>
@@ -275,51 +288,52 @@
 			</section>
 
 			<!-- Slide - Graphs in computer science -->
-			<section data-background="/images/graph1.png" data-state="vdim">
-				<h3>Use Case for a SQL Database</h3>
-				<ul>
-					<li>Selection/Search</li>
-					<li>Aggregation</li>
-				</ul>
-			</section>
+			<section data-state="vdim">
+				<h3>Understand your Choice</h3>
+				<img src="/images/scotty.jpeg"  height="480"  >
+
+
+			</section>			
 		</section>
 
+		<!-- Slides - In the Real World -->
 		<section>
-			<section data-markdown>
-				## Graph Databases ##
+			<section data-markdown data-background="/images/cosimo.png" data-state="dim">
+				# In the Real World #
+			</section>
+			<section data-markdown data-background="/images/cosimo.png" data-state="dim">
+				## Graph Databases Types ##
 				
-				Two Types
 				1. Resource Definition Framework (RDF) Triplestore (W3C/semantic web)
 				1. Labled Property Graph
 			</section>
-			<section data-markdown>
+			<section data-markdown data-background="/images/cosimo.png" data-state="dim">
 					## It Is Complicated ##
 					
 					* Standards don't really exist
 					* Multiple vendors, multiple implementations
 			</section>
-			<section data-markdown>
+			<section data-markdown data-background="/images/cosimo.png" data-state="dim">
 					## Query Languages ##
 					* SPARQL - W3C Standard query language for the semantic web. Some graph databases support
-					* Cypher (and openCypher) - Query langauage developed by Neo4J and opened source in 2015
-					* Gremlin - Part of Apache TinkerPop. Implemented widest variety of vendors, including Auzure Cosmos DB, AWS Neptune, Janus Graph, etc. Even Neo4J implements
+					* Cypher (and openCypher) - Query langauage developed by Neo4j and opene sourced in 2015
+					* Gremlin - Part of Apache TinkerPop. Implemented widest variety of vendors, including AWS Neptune, Azure Cosmos DB, JanusGraph, etc. Even Neo4J implements
 					* GraphQL - Some vendors support GraphQL
 					* SQL-like things - A whole bunch of folks have SQL-esque implementations
 			</section>
-			<section data-markdown>
+			<section data-markdown data-background="/images/cosimo.png" data-state="dim">
 					## Graph Databases ##
 					* SASS - AWS Neptune, Azure Cosmos DB
 					* Commercial - Neo4j, Datastax
 					* OSS - JanusGraph
 			</section>
-			<section data-markdown>
+			<section data-markdown data-background="/images/cosimo.png" data-state="dim">
 					## Choice ##
 					* TinkerPop/Gremlin over Neo4j/Cypher
 					* Gremlin language is most portable
 					* TinkerPop implementations abound
-			
 			</section>
-			<section data-markdown>
+			<section data-markdown data-background="/images/cosimo.png" data-state="dim">
 				## Installation 
 
 				Notes on my GitHub(https://github.com/jptacek/that-conf-2019-graph-database)
@@ -328,7 +342,24 @@
 			</section>
 		</section>
 		<section>
+				<section data-markdown data-background="/images/tinker-modern.png"
+				data-state="dim">	
+				# Querying
+			</section>
+			<section data-background="/images/tinker-modern.png"
+				data-background-size="contain">	
+			</section>
+
 			<section data-markdown>
+					# Querying
+				
+					Creating the graph
+					<pre><code data-trim data-noescape>
+					g = graph.traversal()
+									</code>
+									</pre>
+				</section>
+				<section data-markdown>
 				# Querying
 			
 				Creating the graph
@@ -383,7 +414,7 @@
 			</section>
 			<section data-markdown>
 				# Querying
-				List all of the names. In this case, we need to get the connecting vertex. That vertext is an incoming node to the
+				List all of the names. In this case, we need to get the connecting vertex. That vertex is an incoming node to the
 				edge, so we use the inV keyword
 			
 				<pre>
@@ -451,15 +482,9 @@
 		</section>
 
 
-
-    
-
-
-
-
-
-
-
+        <section data-background="/images/That-Conference-2020.png" data-background-size="contain">
+		  </section>
+  
 
         <section data-background="/images/louvre.jpg" data-state="dim">
           <h2>Questions?</h2>
