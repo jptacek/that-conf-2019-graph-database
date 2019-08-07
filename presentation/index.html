@@ -1,518 +1,585 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
 
-    <title>Introduction to Graph Databases - That Conference 2019</title>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/reveal.css" />
-    <link rel="stylesheet" href="css/theme/black.css" />
+	<title>Introduction to Graph Databases - That Conference 2019</title>
 
-    <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css" />
-    <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="lib/css/monokai.css" />
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/reveal.css" />
+	<link rel="stylesheet" href="css/theme/black.css" />
 
-    <!-- Printing and PDF exports -->
-    <script>
-      var link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = window.location.search.match(/print-pdf/gi)
-        ? 'css/print/pdf.css'
-        : 'css/print/paper.css';
-      document.getElementsByTagName('head')[0].appendChild(link);
-    </script>
-    <style>
-      h1.darkview {
-        /* your styles for the class version-one */
-        color: black;
-      }
-      h3.darkview {
-        /* your styles for the class version-one */
-        color: black;
-      }
+	<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css" />
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css" />
 
-      html.vdim .backgrounds {
-        -webkit-filter: brightness(0.3);
-        -moz-filter: brightness(0.3);
-        -o-filter: brightness(0.3);
-        -ms-filter: brightness(0.3);
-        filter: brightness(0.3);
-      }
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi)
+			? 'css/print/pdf.css'
+			: 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+	<style>
+		.jfkdiv {
+			color: black;
+		}
 
-      html.dim .backgrounds {
-        -webkit-filter: brightness(0.6);
-        -moz-filter: brightness(0.6);
-        -o-filter: brightness(0.6);
-        -ms-filter: brightness(0.6);
-        filter: brightness(0.6);
-      }
-    </style>
-  </head>
-  <body>
-    <div class="reveal">
-      <div class="slides" data-transition="concave">
-        <!-- slide 1 - intdocution -->
-        <section
-          data-background="/images/That-Conference-Branding-Slide.png"
-		  data-state="vdim"
-		  data-background-size="contain"
-        >
-          <h1 class="">Introduction To Graph Databases</h1>
-          <h3>That Conference - August 7, 2019</h3>
-        </section>
+		h1.darkview {
+			/* your styles for the class version-one */
+			color: black;
+		}
 
-        <!-- Slide about me -->
-        <section data-background="/images/louvre.jpg" data-state="dim" >
-          <h2>John Ptacek</h2>
-          <p>
-            <i class="fa fa-html5 fa-sm"></i>&nbsp;<a href="https://jptacek.com"
-              >JPtacek.com</a
-            >
-          </p>
-          <p>
-            <i class="fa fa-twitter fa-sm"></i>&nbsp;<a
-              href="https://twitter.com/jptacek"
-              >@jptacek</a
-            >
-          </p>
-          <p>
-            <i class="fa fa-github fa-sm"></i>&nbsp;<a
-              href="https://github.com/jptacek"
-              >JPtacek</a
-            >
-          </p>
-          <p>
-            <i class="fa fa-linkedin fa-sm"></i>&nbsp;<a
-              href="https://www.linkedin.com/in/johnptacek"
-              >johnptacek</a
-            >
-          </p>
-          <p>
-            <i class="fa fa-html5 fa-sm"></i>&nbsp;<a
-              href="https://www.SkylineTechnologies.com"
-              >Skyline Technologies</a
-            >
-          </p>
-          <p>
-            <i class="fa fa-twitter fa-sm"></i>&nbsp;<a
-              href="https://twitter.com/SkylineTweets"
-              >@SkylineTweets</a
-            >
-          </p>
-        </section>
+		h3.darkview {
+			/* your styles for the class version-one */
+			color: black;
+		}
 
-        <!-- Slide - Sponsors -->
-        <section
-		  data-background="/images/That-Conference-Sponsors-Slide.png"
-		  data-background-size="contain"
-        ></section>
+		html.vdim .backgrounds {
+			-webkit-filter: brightness(0.3);
+			-moz-filter: brightness(0.3);
+			-o-filter: brightness(0.3);
+			-ms-filter: brightness(0.3);
+			filter: brightness(0.3);
+		}
 
-        <!-- Slide - Agenda -->
-        <section>
-          <h2>Agenda</h2>
-		</section>
+		html.dim .backgrounds {
+			-webkit-filter: brightness(0.6);
+			-moz-filter: brightness(0.6);
+			-o-filter: brightness(0.6);
+			-ms-filter: brightness(0.6);
+			filter: brightness(0.6);
+		}
+	</style>
+</head>
 
-		<!-- Slide - What is a graph secition -->
-		<section>
-			<section data-background="/images/Leonhard_Euler.jpg" data-state="vdim"  data-background-size="contain">
-				<h1>What is a Graph?</h1>
-				<ul>
-					<li>Seven Bridges of Königsberg</li>
-					<li>Walk through city and walk across each bridge once</li>
-					<li>Euler creates graph theory</li>
-				</ul>
-				<img src='/images/7bridges.png'>
+<body>
+	<div class="reveal">
+		<div class="slides" data-transition="concave">
+			<!-- slide 1 - intdocution -->
+			<section data-background="/images/That-Conference-Branding-Slide.png" data-state="vdim"
+				data-background-size="contain">
+				<h1 class="">Introduction To Graph Databases</h1>
+				<h3>That Conference - August 7, 2019</h3>
 			</section>
 
-			<!-- Slide - What is a graph -->
-			<section data-background="/images/graph1.png" data-state="vdim">
-				<h1> Graph Theory</h1>
-				<ul>
-					<li>Construct to model relationships between objects</li>
-					<li>Vertex (node, point)</li>
-					<li>Edges (links, lines)</li>
-					<li>And then math happens</li>
-				</ul>
-				<img src='/images/graph1.png'>
+			<!-- Slide about me -->
+			<section data-background="/images/louvre.jpg" data-state="dim">
+				<h2>John Ptacek</h2>
+				<p>
+					<i class="fa fa-html5 fa-sm"></i>&nbsp;<a href="https://jptacek.com">JPtacek.com</a>
+				</p>
+				<p>
+					<i class="fa fa-twitter fa-sm"></i>&nbsp;<a href="https://twitter.com/jptacek">@jptacek</a>
+				</p>
+				<p>
+					<i class="fa fa-github fa-sm"></i>&nbsp;<a href="https://github.com/jptacek">JPtacek</a>
+				</p>
+				<p>
+					<i class="fa fa-linkedin fa-sm"></i>&nbsp;<a
+						href="https://www.linkedin.com/in/johnptacek">johnptacek</a>
+				</p>
+				<p>
+					<i class="fa fa-html5 fa-sm"></i>&nbsp;<a href="https://www.SkylineTechnologies.com">Skyline
+						Technologies</a>
+				</p>
+				<p>
+					<i class="fa fa-twitter fa-sm"></i>&nbsp;<a
+						href="https://twitter.com/SkylineTweets">@SkylineTweets</a>
+				</p>
 			</section>
 
-			<!-- Slide - What is a graph -->
-			<section data-background="/images/chemistry.png" data-state="vdim">
-				<h1> Applications</h1>
-				<ul>
-					<li>Linguistics - </li>
-					<li>Chemistry - Modelling of atom (atoms and bonds)</li>
-					<li>Physics - Quantum Field Theory</li>
-					<li>Social Sciences - Organizations of relationships</li>
-				</ul>
-				
-			</section>
-		
-		</section>
-
-		<!-- Slide - What is a graph database secition -->
-		<section>
-			<section data-markdown>
-				# What is a Graph Database? #
-		
-				> The graph paradigm goes well beyond databases and application development; it’s a reimagining of what’s
-				possible around the idea of connections.
-		
-				[Neo4j blog](https://neo4j.com/blog/why-graph-databases-are-the-future/)
+			<!-- Slide - Sponsors -->
+			<section data-background="/images/That-Conference-Sponsors-Slide.png" data-background-size="contain">
 			</section>
 
-			<!-- Slide - Graphs in computer science -->
-			<section data-background="/images/Leonhard_Euler.jpg" data-state="vdim" section data-markdown>
-				# Graphs in Computer Science
-
-				* Graph (G) is a Vertex (V) and an Edge (E)
-				* Vertex is an object 
-				* Edge defines the relationship
+			<!-- Slide - Agenda -->
+			<section>
+				<h2>Agenda</h2>
 			</section>
 
-			<!-- Slide - Graphs in computer science - Simple graph-->
-			<section data-background="/images/graph1.png" data-state="vdim">
-				<h1>Sample Graph</h1>
-				<ul>
-					<li>John and Clark know each other and are friends. Relationship is two way</li>
-					<li>Carrie and Clark know each other, Carrie is the boss. Relationship is one way</li>
-				</ul>
-				<img src='/images/graph2.png'>
-			</section>
+			<!-- Slide - What is a graph secition -->
+			<section>
+				<section data-background="/images/Leonhard_Euler.jpg" data-state="vdim" data-background-size="contain">
+					<h1>What is a Graph?</h1>
+					<ul>
+						<li>Seven Bridges of Königsberg</li>
+						<li>Walk through city and walk across each bridge once</li>
+						<li>Euler creates graph theory</li>
+					</ul>
+					<img src='/images/7bridges.png'>
+				</section>
 
-			<!-- Slide - What is a graph database secition - Vertices-->
-			<section data-background="/images/hamilton.png" data-state="vdim">
-				<h1> Graph Theory - Vertices</h1>
-				<ul>
-					<li>Vertices can have a label (Person, Event)</li>
-					<li>Vertices can have arbitrary key-value properties (Birth, Death, Intro_text)</li>
-				</ul>
-				<img src='/images/hamilton.png'>
-			</section>
+				<!-- Slide - What is a graph -->
+				<section data-background="/images/graph1.png" data-state="vdim">
+					<h3> Graph Theory</h3>
+					<ul>
+						<li>Construct to model relationships between objects</li>
+						<li>Vertex (node, point)</li>
+						<li>Edges (links, lines)</li>
+						<li>Direct Graph - Edges have direction</li>
+						<li>And then math happens</li>
+					</ul>
+					<img src='/images/graph1.png'>
+				</section>
 
-			<!-- Slide - What is a graph database secition - Vertices-->
-			<section data-background="/images/graph1.png" data-state="vdim">
-				<h1> Graph Theory - Edges</h1>
-				<ul>
-					<li>Edges defined the relationships between Vertices</li>
-					<li>Edges can have a label</li>
-					<li>Edges may have multiple set of key-value pairs for properties (which are queryable)</li>
-					<li>A relationship could be a friend and a boss</li>
-				</ul>
-			</section>
+				<!-- Slide - What is a graph -->
+				<section data-background="/images/chemistry.png" data-state="vdim">
+					<h1> Applications</h1>
+					<ul>
+						<li>Linguistics - Deconstructing speach</li>
+						<li>Chemistry - Modelling of atom (atoms and bonds)</li>
+						<li>Physics - Quantum Field Theory</li>
+						<li>Social Sciences - Organizations of relationships</li>
+					</ul>
 
-			<!-- Slide - What is a graph database secition - Vertices-->
-			<section data-background="/images/graph1.png" data-state="vdim">
-				<img src='/images/hamilton-burr.png'>
-			</section>
+				</section>
 
-
-
-			<!-- Slide - Graphs in computer science -->
-			<section data-background="/images/graph1.png" data-state="vdim">
-				<h1>Graph Models Relationships</h1>
-				<ul>
-					<li>Solves the complexity of relationships</li>
-					<li>Relationship can have attributes; works_with, works_for</li>
-					<li>Richer than SQL databases for these types of datasets</li>
-					<li>Imagine a friend of a friend query in SQL with join table</li>
-				</ul>
 			</section>
 
 			<!-- Slide - What is a graph database secition -->
-			<section  >
-				<h2>Explosive Growth</h2>
+			<section>
+				<section data-markdown>
+					# What is a Graph Database? #
 
-				<img src="/images/graphDbases_since_2013.png"  height="480"  >
+					> The graph paradigm goes well beyond databases and application development; it’s a reimagining of
+					what’s
+					possible around the idea of connections.
 
-				<a href="https://db-engines.com/en/ranking_categories">Source</a>
+					[Neo4j blog](https://neo4j.com/blog/why-graph-databases-are-the-future/)
+				</section>
+
+				<!-- Slide - Graphs in computer science -->
+				<section data-background="/images/Leonhard_Euler.jpg" data-state="vdim" section data-markdown>
+					# Graphs in Computer Science
+
+					* Graph (G) is a Vertex (V) and an Edge (E)
+					* Vertex is an object
+					* Edge defines the relationship
+				</section>
+
+				<!-- Slide - Graphs in computer science - Simple graph-->
+				<section data-background="/images/graph1.png" data-state="vdim">
+					<h1>Sample Graph</h1>
+					<ul>
+						<li>John and Clark know each other and are friends. Relationship is two way</li>
+						<li>Carrie and Clark know each other, Carrie is the boss. Relationship is one way</li>
+					</ul>
+					<img src='/images/graph2.png'>
+				</section>
+
+				<!-- Slide - What is a graph database secition - Vertices-->
+				<section data-background="/images/hamilton.png" data-state="vdim">
+					<h1> Graph Theory - Vertices</h1>
+					<ul>
+						<li>Vertices can have a label (Person, Event)</li>
+						<li>Vertices can have arbitrary key-value properties (Birth, Death, Intro_text)</li>
+					</ul>
+					<img src='/images/hamilton.png'>
+				</section>
+
+				<!-- Slide - What is a graph database secition - Vertices-->
+				<section data-background="/images/graph1.png" data-state="vdim">
+					<h1> Graph Theory - Edges</h1>
+					<ul>
+						<li>Edges defined the relationships between Vertices</li>
+						<li>Edges can have a label</li>
+						<li>Edges may have multiple set of key-value pairs for properties (which are queryable)</li>
+						<li>A relationship could be a friend and a boss</li>
+					</ul>
+				</section>
+
+				<!-- Slide - What is a graph database secition - Vertices-->
+				<section data-background="/images/graph1.png" data-state="vdim">
+					<img src='/images/hamilton-burr.png'>
+				</section>
+
+
+
+				<!-- Slide - Graphs in computer science -->
+				<section data-background="/images/graph1.png" data-state="vdim">
+					<h1>Graph Models Relationships</h1>
+					<ul>
+						<li>Solves the complexity of relationships</li>
+						<li>Relationship can have attributes; works_with, works_for</li>
+						<li>Richer than SQL databases for these types of datasets</li>
+						<li>Imagine a friend of a friend query in SQL with join table</li>
+					</ul>
+				</section>
+
+				<!-- Slide - What is a graph database secition -->
+				<section>
+					<h2>Explosive Growth</h2>
+
+					<img src="/images/graphDbases_since_2013.png" height="480">
+
+					<a href="https://db-engines.com/en/ranking_categories">Source</a>
+				</section>
+
 			</section>
+			<section>
 
-		</section>
-		<section>
+				<!-- Slide - What is a graph database secition - Use cases-->
+				<section>
+					<h2>SQL or Graph Database</h2>
 
-			<!-- Slide - What is a graph database secition - Use cases-->
-			<section  >
-				<h2>SQL or Graph Database</h2>
+					<img src="images/shiny.jpeg" height="480">
+				</section>
 
-				<img src="images/shiny.jpeg"  height="480"  >
-			</section>
-
-			<!-- Slide - What is a graph database secition - Use cases-->
-			<section data-markdown>
+				<!-- Slide - What is a graph database secition - Use cases-->
+				<section data-markdown>
 					# Use Cases for a Graph Database#
 
-					* Recommendation Engines 
-					* Artificial Intelligence 
-					* Master Data 
+					* Recommendation Engines
+					* Artificial Intelligence
+					* Master Data
 					* Knowledge Graph
 					* Fraud Detection
 					* Centrality and Clustering
 
-			</section>
+				</section>
 
-			
-			<!-- Slide - Graphs in computer science -->
-			<section data-background="/images/graph1.png" data-state="vdim">
-				<h3>Use Case for a Graph Database</h3>
-				<ul>
-					<li>Related/Recursive Data</li>
+
+				<!-- Slide - Graphs in computer science -->
+				<section data-background="/images/graph1.png" data-state="vdim">
+					<h3>Use Case for a Graph Database</h3>
 					<ul>
-						<li>How do I know Person X</li>
-						<li>How many users follow people that follow me on twitter</li>
+						<li>Related/Recursive Data</li>
+						<ul>
+							<li>How do I know Person X</li>
+							<li>How many users follow people that follow me on twitter</li>
+						</ul>
+						<li>Pattern Matching</li>
+						<li>Clustering</li>
+						<ul>
+							<li>Finding significiant figures in history</li>
+							<li>Most influentional contact</li>
+							<li>parts fail at same time</li>
+						</ul>
 					</ul>
-					<li>Pattern Matching</li>
-					<li>Clustering</li>
+				</section>
+
+				<!-- Slide - Graphs in computer science -->
+				<section data-background="/images/graph1.png" data-state="vdim">
+					<h3>Use Case for a SQL Database</h3>
 					<ul>
-						<li>Finding significiant figures in history</li>
-						<li>Most influentional contact</li>
-						<li>parts fail at same time</li>
-					</ul>			
-				</ul>
+						<li>Selection/Search</li>
+						<li>Aggregation</li>
+					</ul>
+
+				</section>
+
+				<!-- Slide - Graphs in computer science -->
+				<section data-state="vdim">
+					<h3>Understand your Choice</h3>
+					<img src="/images/scotty.jpeg" height="480">
+				</section>
 			</section>
 
-			<!-- Slide - Graphs in computer science -->
-			<section data-background="/images/graph1.png" data-state="vdim">
-				<h3>Use Case for a SQL Database</h3>
-				<ul>
-					<li>Selection/Search</li>
-					<li>Aggregation</li>
-				</ul>
+			<!-- Slides - In the Real World -->
+			<section>
+				<section data-markdown data-background="/images/cosimo.png" data-state="dim">
+					# In the Real World #
+				</section>
+				<section data-markdown data-background="/images/cosimo.png" data-state="dim">
+					## Graph Databases Types ##
 
-			</section>
-
-			<!-- Slide - Graphs in computer science -->
-			<section data-state="vdim">
-				<h3>Understand your Choice</h3>
-				<img src="/images/scotty.jpeg"  height="480"  >
-
-
-			</section>			
-		</section>
-
-		<!-- Slides - In the Real World -->
-		<section>
-			<section data-markdown data-background="/images/cosimo.png" data-state="dim">
-				# In the Real World #
-			</section>
-			<section data-markdown data-background="/images/cosimo.png" data-state="dim">
-				## Graph Databases Types ##
-				
-				1. Resource Definition Framework (RDF) Triplestore (W3C/semantic web)
-				1. Labled Property Graph
-			</section>
-			<section data-markdown data-background="/images/cosimo.png" data-state="dim">
+					1. Resource Definition Framework (RDF) Triplestore (W3C/semantic web)
+					1. Labled Property Graph
+				</section>
+				<section data-markdown data-background="/images/cosimo.png" data-state="dim">
 					## It Is Complicated ##
-					
+
 					* Standards don't really exist
 					* Multiple vendors, multiple implementations
-			</section>
-			<section data-markdown data-background="/images/cosimo.png" data-state="dim">
+				</section>
+				<section data-markdown data-background="/images/cosimo.png" data-state="dim">
 					## Query Languages ##
 					* SPARQL - W3C Standard query language for the semantic web. Some graph databases support
 					* Cypher (and openCypher) - Query langauage developed by Neo4j and opene sourced in 2015
-					* Gremlin - Part of Apache TinkerPop. Implemented widest variety of vendors, including AWS Neptune, Azure Cosmos DB, JanusGraph, etc. Even Neo4J implements
+					* Gremlin - Part of Apache TinkerPop. Implemented widest variety of vendors, including AWS Neptune,
+					Azure Cosmos DB, JanusGraph, etc. Even Neo4J implements
 					* GraphQL - Some vendors support GraphQL
 					* SQL-like things - A whole bunch of folks have SQL-esque implementations
-			</section>
-			<section data-markdown data-background="/images/cosimo.png" data-state="dim">
+				</section>
+				<section data-markdown data-background="/images/cosimo.png" data-state="dim">
 					## Graph Databases ##
 					* SASS - AWS Neptune, Azure Cosmos DB
 					* Commercial - Neo4j, Datastax
 					* OSS - JanusGraph
-			</section>
-			<section data-markdown data-background="/images/cosimo.png" data-state="dim">
+				</section>
+				<section data-markdown data-background="/images/cosimo.png" data-state="dim">
 					## Choice ##
 					* TinkerPop/Gremlin over Neo4j/Cypher
 					* Gremlin language is most portable
 					* TinkerPop implementations abound
-			</section>
-			<section data-markdown data-background="/images/cosimo.png" data-state="dim">
-				## Installation 
+				</section>
+				<section data-markdown data-background="/images/cosimo.png" data-state="dim">
+					## Installation
 
-				Notes on my GitHub(https://github.com/jptacek/that-conf-2019-graph-database)
+					Notes on my GitHub(https://github.com/jptacek/that-conf-2019-graph-database)
 
-				Essentially follow and run
+					Essentially follow and run
+				</section>
 			</section>
-		</section>
-		<section>
-				<section data-markdown data-background="/images/tinker-modern.png"
-				data-state="dim">	
-				# Querying
-			</section>
-			<section data-background="/images/tinker-modern.png"
-				data-background-size="contain">	
-			</section>
-
-			<section data-markdown>
+			<section>
+				<section data-markdown data-background="/images/tinker-modern.png" data-state="dim">
 					# Querying
-				
+				</section>
+				<section data-background="/images/tinker-modern.png" data-background-size="contain">
+				</section>
+
+				<section data-markdown>
+					# Querying
+
+					TinkerPop has a starter Graph database available. We create the graph by
+
+					<pre>
+						<code data-trim data-noescape>graph = TinkerFactory.createModern()</code>
+					</pre>
+				</section>
+
+				<section data-markdown>
+					# Querying
+
 					Creating the graph
-					<pre><code data-trim data-noescape>
-					g = graph.traversal()
-									</code>
-									</pre>
+					<pre>
+						<code data-trim data-noescape>g = graph.traversal()</code>
+					</pre>
 				</section>
 				<section data-markdown>
-				# Querying
-			
-				Creating the graph
-				<pre><code data-trim data-noescape>
-			    g = graph.traversal()
-								</code>
-								</pre>
+					# Querying
+
+					List all the things
+					<pre>
+						<code data-trim data-noescape>g.V()</code>
+					</pre>
+				</section>
+				<section data-markdown>
+					# Querying
+
+					Get the first vertex
+
+					<pre>
+						<code data-trim data-noescape>g.V(1)</code>
+					</pre>
+				</section>
+				<section data-markdown>
+					# Querying
+
+					Get a property off of the first vertex by key
+
+					<pre>
+						<code data-trim data-noescape>g.V(1).values('name')
+						g.V(1).values('age')
+						</code>
+					</pre>
+				</section>
+				<section data-markdown>
+					# Querying
+
+					Aggregate together
+					<pre>
+						<code data-trim data-noescape>g.V(1).values('name','age')</code>
+					</pre>
+				</section>
+				<section data-markdown>
+					# Querying
+
+					List all of the edges out of a vertex with a label property on the edge
+					<pre>
+						<code data-trim data-noescape>g.V(1).outE('knows')</code>
+					</pre>
+				</section>
+				<section data-markdown>
+					# Querying
+					List all of the names. In this case, we need to get the connecting vertex. That vertex is an
+					incoming node to the
+					edge, so we use the inV keyword
+
+					<pre>
+						<code data-trim data-noescape>g.V(1).outE('knows').inV().values('name','age')</code>
+					</pre>
+				</section>
+				<section data-markdown>
+					# Querying
+					We can also have copmarison operators
+
+					<pre>
+						<code data-trim data-noescape>g.V(1).outE('knows').inV().has('age',gt(30)).values('name','age')</code>
+					</pre>
+				</section>
+				<section data-markdown>
+					# Querying
+					We are going to start over. Quit command line (:q) and restart
+					<pre>
+						<code data-trim data-noescape>:q</code>
+					</pre>
+				</section>
+				<section data-markdown>
+					# Querying
+
+					Create conection
+					<pre>
+						<code data-trim data-noescape>graph = TinkerGraph.open()</code>
+					</pre>
+				</section>
+				<section data-markdown>
+					# Querying
+
+					Create graph traversal
+
+					<pre>
+						<code data-trim data-noescape>g = graph.traversal()</code>
+					</pre>
+				</section>
+				<section data-markdown>
+					# Querying
+
+					Add a vertex
+					<pre>
+						<code data-trim data-noescape>v1 = g.addV('person').property(id,1).property('name','marko').property('age',27)</code>
+					</pre>
+				</section>
+				<section data-markdown>
+					# Querying
+
+					Add person the second
+
+					<pre>
+						<code data-trim data-noescape>v2 = g.addV('person').property(id,2).property('name','josh').property('age',32)</code>
+					</pre>
+				</section>
+				<section data-markdown>
+					# Querying
+
+					Create an edge. This will connnect two item and provide a type of relationship
+
+					<pre>
+						<code data-trim data-noescape>g.V(1).addE('knows').to(g.V(2))</code>
+					</pre>
+				</section>
+				<section data-markdown>
+					# Querying
+
+					Gremlin Query
+
+					<pre>
+							<code data-trim data-noescape>g.V().has('name','marko').out('knows').values('name')</code>
+						</pre>
+
+					Cypher Query
+
+					<pre>
+							<code data-trim data-noescape>MATCH ( {name:'marko'} )-[:knows]->( x )
+									RETURN x.name</code>
+						</pre>
+				</section>
 			</section>
-			<section data-markdown>
-				# Querying
-			
-				List all the things
-				<pre>
-					<code data-trim data-noescape>g.V()</code>
-				</pre>
+
+			<section>
+				<section data-markdown data-background="/images/cosimo.png" data-state="dim">
+					## Real World Example
+
+				</section>
+				<section data-markdown data-background="images/tr1.jpg" data-background-size="contain">
+				</section>
+				<section data-markdown data-background="images/tr2.png" data-state="img-right">
+					<textarea data-template>
+						## Young Theodore and Elliott Roosevelt 
+					</textarea>
+				</section>
+				<section class="jfkdiv" data-markdown data-background="images/jfkClinton.jpg" data-state="img-top">
+					<textarea data-template>
+								  * Connections are important
+								  * Interactions matter
+								  * Relationships matter
+							  </textarea>
+				</section>
+				<section data-markdown data-background="images/cosimoMedici.jpg" data-state="img-right">
+					<textarea data-template>
+						## Cosimo
+						* A graph database system to record
+							* People
+							* Events
+							* Dates 
+							* Places 
+					</textarea>
+				</section>
+				<section data-markdown data-background="images/cosimoMedici.jpg" data-state="img-right">
+					[History.page](https://history.page/people)
+				</section>
+				<section data-markdown>
+					# Querying
+
+					Counting vertices
+					<pre>
+						<code data-trim data-noescape>g.V().count()</code>
+						<code data-trim data-noescape>g.V().hasLabel('people')</code>
+						<code data-trim data-noescape>g.V().hasLabel('event')</code>
+					</pre>
+				</section>
+				<section data-markdown>
+					# Querying
+
+					Existence check
+					<pre>
+						<code data-trim data-noescape>g.V().hasLabel('people').has('id','Abraham Lincoln').count()</code>
+						<code data-trim data-noescape>g.V().hasLabel('people').has('id','Scott Hutchinson').count()</code>
+					</pre>
+				</section>
+				<section data-markdown>
+					# Querying
+
+					People associated with a person
+					<pre>
+						<code data-trim data-noescape>g.V('Abraham Lincoln').repeat(both().simplePath()).emit().times(1).dedup()</code>
+					</pre>
+				</section>
+				<section data-markdown>
+					# Querying
+
+					Eents associated with a person
+					<pre>
+						<code data-trim data-noescape>g.V('Abraham Lincoln').as('a').repeat(bothE('PARTICIPATED').bothV().where(neq('a'))).times(1).path()</code>
+					</pre>
+				</section>
+
 			</section>
-			<section data-markdown>
-				# Querying
-			
-				Get the first vertex
-			
-				<pre>
-					<code data-trim data-noescape>g.V(1)</code>
-				</pre>
+			<section data-background="/images/That-Conference-2020.png" data-background-size="contain">
 			</section>
-			<section data-markdown>
-				# Querying
-			
-				Get a property off of the first vertex by key
-			
-				<pre>
-					<code data-trim data-noescape>g.V(1).values('name')
-					g.V(1).values('age')
-					</code>
-				</pre>
-			</section>
-			<section data-markdown>
-				# Querying
-			
-				Aggregate together
-				<pre>
-					<code data-trim data-noescape>g.V(1).values('name','age')</code>
-				</pre>
-			</section>
-			<section data-markdown>
-				# Querying
-			
-				List all of the edges out of a vertex with a label property on the edge
-				<pre>
-					<code data-trim data-noescape>g.V(1).outE('knows')</code>
-				</pre>
-			</section>
-			<section data-markdown>
-				# Querying
-				List all of the names. In this case, we need to get the connecting vertex. That vertex is an incoming node to the
-				edge, so we use the inV keyword
-			
-				<pre>
-					<code data-trim data-noescape>g.V(1).outE('knows').inV().values('name','age')</code>
-				</pre>
-			</section>
-			<section data-markdown>
-				# Querying
-				We can also have copmarison operators
-			
-				<pre>
-					<code data-trim data-noescape>g.V(1).outE('knows').inV().has('age',gt(30)).values('name','age')</code>
-				</pre>
-			</section>
-			<section data-markdown>
-				# Querying
-				We are going to start over. Quit command line (:q) and restart
-				<pre>
-					<code data-trim data-noescape>:q</code>
-				</pre>
-			</section>
-			<section data-markdown>
-				# Querying
-			
-				Create conection
-				<pre>
-					<code data-trim data-noescape>graph = TinkerGraph.open()</code>
-				</pre>
-			</section>
-			<section data-markdown>
-				# Querying
-			
-				Create graph traversal
-			
-				<pre>
-					<code data-trim data-noescape>g = graph.traversal()</code>
-				</pre>
-			</section>
-			<section data-markdown>
-				# Querying
-			
-				Add a vertex
-				<pre>
-					<code data-trim data-noescape>v1 = g.addV('person').property(id,1).property('name','marko').property('age',27)</code>
-				</pre>
-			</section>
-			<section data-markdown>
-				# Querying
-			
-				Add person the second
-			
-				<pre>
-					<code data-trim data-noescape>v2 = g.addV('person').property(id,2).property('name','josh').property('age',32)</code>
-				</pre>
-			</section>
-			<section data-markdown>
-				# Querying
-			
-				Create an edge. This will connnect two item and provide a type of relationship
-			
-				<pre>
-					<code data-trim data-noescape>g.V(1).addE('knows').to(g.V(2))</code>
-				</pre>
-			</section>
-		</section>
 
 
-        <section data-background="/images/That-Conference-2020.png" data-background-size="contain">
-		  </section>
-  
+			<section data-background="/images/louvre.jpg" data-state="dim">
+				<h2>Questions?</h2>
+				<h3>John Ptacek</h3>
+				<p>
+					<i class="fa fa-twitter fa-sm"></i>&nbsp;<a href="https://twitter.com/jptacek">@jptacek</a>
+				</p>
+			</section>
+		</div>
+	</div>
 
-        <section data-background="/images/louvre.jpg" data-state="dim">
-          <h2>Questions?</h2>
-          <h3>John Ptacek</h3>
-          <p>
-            <i class="fa fa-twitter fa-sm"></i>&nbsp;<a
-              href="https://twitter.com/jptacek"
-              >@jptacek</a
-            >
-          </p>
-        </section>
-      </div>
-    </div>
+	<script src="js/reveal.js"></script>
 
-    <script src="js/reveal.js"></script>
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true },
+			],
+		});
+	</script>
+</body>
 
-    <script>
-      // More info about config & dependencies:
-      // - https://github.com/hakimel/reveal.js#configuration
-      // - https://github.com/hakimel/reveal.js#dependencies
-      Reveal.initialize({
-        dependencies: [
-          { src: 'plugin/markdown/marked.js' },
-          { src: 'plugin/markdown/markdown.js' },
-          { src: 'plugin/notes/notes.js', async: true },
-          { src: 'plugin/highlight/highlight.js', async: true },
-        ],
-      });
-    </script>
-  </body>
 </html>
