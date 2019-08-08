@@ -20,7 +20,7 @@ And for the record, Graph databases have nothing (directly) to do with GraphQL, 
 
 ## Slides
 
-The slides can be downloaded as a [PDF](Introduction to Graph Databases.pdf) or you can run the RevealJS application locally on your machine
+The slides can be downloaded as a [PDF](https://github.com/jptacek/that-conf-2019-graph-database/blob/master/Introduction%20to%20Graph%20Databases.pdf) or you can run the RevealJS application locally on your machine
 
 ```
 cd presentation
