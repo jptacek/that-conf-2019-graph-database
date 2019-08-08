@@ -17,3 +17,13 @@ In this presentation, we are going to look at the various players in the Graph D
 You will leave with a newfound awareness at the class of problems graph databases can solve.
 
 And for the record, Graph databases have nothing (directly) to do with GraphQL, that is a whole other talk!
+
+## Slides
+
+The slides can be downloaded as a [PDF](slides.pdf) or you can run the RevealJS application locally on your machine
+
+```
+cd presentation
+npm i
+npm start
+```
