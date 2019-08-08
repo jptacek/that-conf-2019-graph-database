@@ -72,6 +72,14 @@
 			<section data-background="/images/louvre.jpg" data-state="dim">
 				<h2>John Ptacek</h2>
 				<p>
+					<i class="fa fa-html5 fa-sm"></i>&nbsp;<a href="https://www.SkylineTechnologies.com">Skyline
+						Technologies</a>
+				</p>
+				<p>
+					<i class="fa fa-twitter fa-sm"></i>&nbsp;<a
+						href="https://twitter.com/SkylineTweets">@SkylineTweets</a>
+				</p>
+				<p>
 					<i class="fa fa-html5 fa-sm"></i>&nbsp;<a href="https://jptacek.com">JPtacek.com</a>
 				</p>
 				<p>
@@ -84,14 +92,6 @@
 					<i class="fa fa-linkedin fa-sm"></i>&nbsp;<a
 						href="https://www.linkedin.com/in/johnptacek">johnptacek</a>
 				</p>
-				<p>
-					<i class="fa fa-html5 fa-sm"></i>&nbsp;<a href="https://www.SkylineTechnologies.com">Skyline
-						Technologies</a>
-				</p>
-				<p>
-					<i class="fa fa-twitter fa-sm"></i>&nbsp;<a
-						href="https://twitter.com/SkylineTweets">@SkylineTweets</a>
-				</p>
 			</section>
 
 			<!-- Slide - Sponsors -->
@@ -99,8 +99,14 @@
 			</section>
 
 			<!-- Slide - Agenda -->
-			<section>
-				<h2>Agenda</h2>
+			<section data-markdown>
+				## Agenda
+				* What is a Graph?
+				* What is a Graph Database?
+				* SQL or Graph Database
+				* In the Real World
+				* Querying
+				* I Did this Thing
 			</section>
 
 			<!-- Slide - What is a graph secition -->
@@ -133,7 +139,7 @@
 					<h1> Applications</h1>
 					<ul>
 						<li>Linguistics - Deconstructing speach</li>
-						<li>Chemistry - Modelling of atom (atoms and bonds)</li>
+						<li>Chemistry - Modelling of molecules (atoms and bonds)</li>
 						<li>Physics - Quantum Field Theory</li>
 						<li>Social Sciences - Organizations of relationships</li>
 					</ul>
@@ -167,8 +173,8 @@
 				<section data-background="/images/graph1.png" data-state="vdim">
 					<h1>Sample Graph</h1>
 					<ul>
-						<li>John and Clark know each other and are friends. Relationship is two way</li>
-						<li>Carrie and Clark know each other, Carrie is the boss. Relationship is one way</li>
+						<li>Ryan and Frank know each other and are friends. Connection is two way</li>
+						<li>Liz and Frank know each other, Liz is the boss. Connection is one way</li>
 					</ul>
 					<img src='/images/graph2.png'>
 				</section>
@@ -178,16 +184,20 @@
 					<h1> Graph Theory - Vertices</h1>
 					<ul>
 						<li>Vertices can have a label (Person, Event)</li>
+						<li>A point in a graph</li>
 						<li>Vertices can have arbitrary key-value properties (Birth, Death, Intro_text)</li>
+						<li>Zero or more edges meet at a Vertex</li>
 					</ul>
+				</section>
+				<!-- Slide - What is a graph database secition - Vertices-->
+				<section data-background="/images/graph1.png" data-state="vdim">
 					<img src='/images/hamilton.png'>
 				</section>
-
 				<!-- Slide - What is a graph database secition - Vertices-->
 				<section data-background="/images/graph1.png" data-state="vdim">
 					<h1> Graph Theory - Edges</h1>
 					<ul>
-						<li>Edges defined the relationships between Vertices</li>
+						<li>Edges define the relationships between Vertices</li>
 						<li>Edges can have a label</li>
 						<li>Edges may have multiple set of key-value pairs for properties (which are queryable)</li>
 						<li>A relationship could be a friend and a boss</li>
@@ -254,7 +264,7 @@
 							<li>How do I know Person X</li>
 							<li>How many users follow people that follow me on twitter</li>
 						</ul>
-						<li>Pattern Matching</li>
+						<li>Recognize Patterns in Data</li>
 						<li>Clustering</li>
 						<ul>
 							<li>Finding significiant figures in history</li>
@@ -291,9 +301,12 @@
 
 					1. Resource Definition Framework (RDF) Triplestore (W3C/semantic web)
 					1. Labled Property Graph
+					* Vertices and Edges support a label
+					* Key-Value pairs
+
 				</section>
 				<section data-markdown data-background="/images/cosimo.png" data-state="dim">
-					## It Is Complicated ##
+					## It Is Complicated
 
 					* Standards don't really exist
 					* Multiple vendors, multiple implementations
@@ -301,30 +314,37 @@
 				<section data-markdown data-background="/images/cosimo.png" data-state="dim">
 					## Query Languages ##
 					* SPARQL - W3C Standard query language for the semantic web. Some graph databases support
-					* Cypher (and openCypher) - Query langauage developed by Neo4j and opene sourced in 2015
-					* Gremlin - Part of Apache TinkerPop. Implemented widest variety of vendors, including AWS Neptune,
-					Azure Cosmos DB, JanusGraph, etc. Even Neo4J implements
 					* GraphQL - Some vendors support GraphQL
 					* SQL-like things - A whole bunch of folks have SQL-esque implementations
+					* Cypher (and openCypher) - Query langauage developed by Neo4j and open sourced in 2015
+					* Gremlin - Part of Apache TinkerGraph. Implemented widest variety of vendors, including AWS
+					Neptune,
+					Azure Cosmos DB, JanusGraph, etc. Even Neo4J implements
 				</section>
 				<section data-markdown data-background="/images/cosimo.png" data-state="dim">
 					## Graph Databases ##
 					* SASS - AWS Neptune, Azure Cosmos DB
 					* Commercial - Neo4j, Datastax
-					* OSS - JanusGraph
+					* OSS - JanusGraph, TinkerPop
+				</section>
+				<section data-markdown data-background="/images/cosimo.png" data-state="dim">
+					## Main Choices ##
+
+					Neo4j - Very popular. It will win your Google eyes
+					* Cypher is easy to start with
+					* Offerings from cloud vendors
+
+					TinkerGraph/Gremlin - Open source from Apache
+					* Harder to get started
+					* MANY options
 				</section>
 				<section data-markdown data-background="/images/cosimo.png" data-state="dim">
 					## Choice ##
-					* TinkerPop/Gremlin over Neo4j/Cypher
-					* Gremlin language is most portable
-					* TinkerPop implementations abound
-				</section>
-				<section data-markdown data-background="/images/cosimo.png" data-state="dim">
-					## Installation
-
-					Notes on my GitHub(https://github.com/jptacek/that-conf-2019-graph-database)
-
-					Essentially follow and run
+					TinkerGraph/Gremlin over Neo4j/Cypher
+					* Gremlin helps you understand graphs better than Cypher
+					* Gremlin language is most portable amongst vendors
+					* Gremlin is the most widely available
+					* TinkerGraph implementations abound
 				</section>
 			</section>
 			<section>
@@ -484,7 +504,7 @@
 
 			<section>
 				<section data-markdown data-background="/images/cosimo.png" data-state="dim">
-					## Real World Example
+					## I Did This Thing
 
 				</section>
 				<section data-markdown data-background="images/tr1.jpg" data-background-size="contain">
@@ -560,6 +580,9 @@
 				<h3>John Ptacek</h3>
 				<p>
 					<i class="fa fa-twitter fa-sm"></i>&nbsp;<a href="https://twitter.com/jptacek">@jptacek</a>
+				</p>
+				<p>
+					<i class="fa fa-github fa-sm"></i>&nbsp;<a href="https://github.com/jptacek">JPtacek</a>
 				</p>
 			</section>
 		</div>
